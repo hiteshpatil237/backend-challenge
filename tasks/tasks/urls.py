@@ -19,6 +19,11 @@ from django.urls import path, include
 from rest_framework import routers
 from application.views import TaskViewSet, LabelViewSet
 
+router = routers.DefaultRouter()
+router.register(r"task", TaskViewSet)
+router.register(r"label", LabelViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls))
 ]

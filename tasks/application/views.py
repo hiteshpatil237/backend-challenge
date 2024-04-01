@@ -3,9 +3,9 @@ from .serializers import TaskSerializer, LabelSerializer
 from .models import Task, Label
 
 class TaskViewSet(viewsets.ModelViewSet):
-    queryset = Task.objects.all().order_by('-created_at')
+    queryset = Task.objects.all().order_by('owner')
     serializer_class = TaskSerializer
 
 class LabelViewSet(viewsets.ModelViewSet):
-    queryset = Label.objects.all().order_by('-created_at')
+    queryset = Label.objects.all().order_by('owner')
     serializer_class = LabelSerializer
