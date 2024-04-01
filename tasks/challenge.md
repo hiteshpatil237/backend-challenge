@@ -29,9 +29,9 @@
 4. API Endpoints:
    - Task:
       - [http://127.0.0.1:8000/api/task/](http://127.0.0.1:8000/api/task/) - Getting all the tasks pertaining to the logged in user.
-      - [http://127.0.0.1:8000/api/task/<task-number>](http://127.0.0.1:8000/api/task) - Updating, editing details of certain task
+      - [http://127.0.0.1:8000/api/task/1](http://127.0.0.1:8000/api/task) - Replace the number after /api/task - Updating, editing details of certain task
 
    - Label:
       - [http://127.0.0.1:8000/api/label/](http://127.0.0.1:8000/api/label/) - Getting all the label pertaining to the logged in user.
-      - [http://127.0.0.1:8000/api/label/<label-number>](http://127.0.0.1:8000/api/label) - Updating, editing details of certain label
+      - [http://127.0.0.1:8000/api/label/1](http://127.0.0.1:8000/api/label) - Replace the number after /api/label -  Updating, editing details of certain label
 
