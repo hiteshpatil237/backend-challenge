@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from application.views import TaskViewSet, LabelViewSet
+from django.views.generic.base import RedirectView
 
 router = routers.DefaultRouter()
 router.register(r"task", TaskViewSet)
 router.register(r"label", LabelViewSet)
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='admin/', permanent=False)),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))
 ]
